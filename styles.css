@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.section {
+    padding: 50px 20px;
+    min-height: 100vh;
+    border-bottom: 1px solid #ddd;
+    scroll-margin-top: 80px;
+}
+
+.section img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.section img[src] {
+    opacity: 1;
+}
+
+.header {
+    background-color: #004f57;
+    color: rgb(255, 255, 255);
+    padding: 40px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header i {
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-grow: 1;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem; 
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #46b5c0;
+}
+
+.section:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.section:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.section h1 {
+    text-align: center;
+    font-size: 2.5rem; 
+    color: #00667d; 
+    margin: 0 0 20px;
+    transition: transform 0.3s ease, font-size 0.3s ease; 
+}
+
+.section h1:hover {
+    transform: scale(1.1); 
+    color: #004f57; 
+}
+
+.section img {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.section img:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 720px) {
+    img {
+        max-width: 100%;
+        height: auto;    
+        margin: 0 auto; 
+        display: block;  
+    }
+
+    .image-container {
+        padding: 5px;           
+        margin-top: 20px;      
+        border: none;          
+        background-color: #fff; 
+    }
+
+    .section h1 {
+        font-size: 1.5rem; 
+        text-align: center; 
+    }
+
+    .section p {
+        font-size: 1rem;    
+        line-height: 1.5;  
+        padding: 0 10px; 
+    }
+}
+
+hr {
+    border: none;
+    border-top: 4px solid #004f57;
+    width: 80%;
+    margin: 20px auto; 
+}
